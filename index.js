@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const TOKEN = 'MzgyMjgwMjE1ODIyNTk4MTQ0.D1D7KQ.jRy--mTNgpPoJ9ZRotW_6InCq20'
+const TOKEN = 'MzgyMjgwMjE1ODIyNTk4MTQ0.D3qzEQ.j6TvNylcV-icOfCZc6WFSCKZzaM'
 
 var DNE = 'I don\'t currently have this implemented yet! Try again later!';
 
