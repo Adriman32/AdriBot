@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const TOKEN = 'MzgyMjgwMjE1ODIyNTk4MTQ0.XVs-FQ.JfVa_7J_OUM2dT9iwQUKZsRkzkI'
+const config = require('./config.js');
 
 var DNE = 'I don\'t currently have this implemented yet! Try again later!';
 
@@ -201,4 +201,4 @@ botId = botId.toUpperCase();
 	}
 });
 
-bot.login(TOKEN).then().catch('Error logging in: ${console.error}');
+bot.login(config.discordToken).then().catch('Error logging in: ${console.error}');
