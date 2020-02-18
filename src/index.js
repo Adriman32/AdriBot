@@ -165,12 +165,12 @@ botId = botId.toUpperCase();
 	
 	if (msg === prefix + 'DAB'){
 		var randDab = Math.floor(Math.random() * 11);
-		var fileName = './GIF/dab_' + randDab + '.gif';
+		var fileName = './assets/GIF/dab_' + randDab + '.gif';
 		message.channel.send(new Discord.Attachment(fileName));
 	}
 	
 	if ( ( /*msg.includes(prefix) || msg.includes('ADRIBOT') ) && */ msg.includes('PARTY'))) {
-		message.channel.send(new Discord.Attachment('./GIF/frank_party.gif'));
+		message.channel.send(new Discord.Attachment('./assets/GIF/frank_party.gif'));
 	}
 	
 	if ( msg.includes('GOOD') && msg.includes('BOT') ) {
