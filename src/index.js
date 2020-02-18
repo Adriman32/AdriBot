@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const config = require('./config.js');
+const config = require('./config.json');
+
+
 
 var DNE = 'I don\'t currently have this implemented yet! Try again later!';
 
@@ -39,6 +41,7 @@ botId = botId.toUpperCase();
   if (msg.includes(prefix + 'TEST')) {
 	message.channel.send('My name is <@' + botId + '>');
 	message.channel.send('My message was ' + msg);
+	message.channel.send(config.DISCORD_TOKEN);
 	
 	for ( var i = 9; i < msg.length; i++ )
 	{
@@ -201,4 +204,4 @@ botId = botId.toUpperCase();
 	}
 });
 
-bot.login(config.discordToken).then().catch('Error logging in: ${console.error}');
+bot.login(config.DISCORD_TOKEN).then().catch('Error logging in: ${console.error}');
