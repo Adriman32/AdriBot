@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require('./config.json');
 
-
-
 var DNE = 'I don\'t currently have this implemented yet! Try again later!';
 
 
@@ -22,37 +20,34 @@ bot.on('ready', function() {
 	});
 });
 
-// Responses
-
+// -------------------------Responses--------------------------------------------- //
 
 bot.on('message', function(message) {
 
-var sender = message.author;
+var sender = message.member.user.tag;
+var senderId = message.member.toString();
 var msg = message.content.toUpperCase();
 var prefix = '/AB ';
 var channelId = message.channel.id;
 var botId = bot.user.id.toString();
 botId = botId.toUpperCase();
 
-  if (sender.bot) return;
+  if (senderId.bot) return;
   //if (!message.content.startsWith('/ab')) return;
 
 
+ /*		Trigger: /ab test
+		Response: Custom test cases for development of AdriBot   */
+  
   if (msg.includes(prefix + 'TEST')) {
 	message.channel.send('My name is <@' + botId + '>');
-	message.channel.send('My message was ' + msg);
-	message.channel.send(config.DISCORD_TOKEN);
+	message.channel.send('My message I received was ' + msg);
 	
 	for ( var i = 9; i < msg.length; i++ )
 	{
 		message.channel.send('Letter ' + i + ' of message: ' + msg[i]);
 	}
-	
-	
   }
-  
-  
-  
   
   
   /*      Trigger: /ab help
@@ -71,32 +66,23 @@ botId = botId.toUpperCase();
 /*      Trigger: /ab rules
         Response: Random Server Rule   */
   if (msg === prefix + 'RULES') {
+	
+	console.log("\n" + sender + " ran \'Rules\' trigger.");
 
-    var resPick = Math.floor(Math.random() * 5);
-    console.log("\nUser ran \'Rules\' trigger. Number generated:\t" + resPick);
-
-    if (resPick == 0) {
-    message.reply('Rule #1: Never Pull Out!');
-  }
-    else if (resPick == 1) {
-      message.reply('Rule #2: Spitters Are Quitters!');
-    }
-    else if (resPick == 2) {
-      message.reply('Rule #3: Safety First!');
-    }
-    else if (resPick == 3) {
-      message.reply('Rule #4: No Take-Backs!');
-    }
-    else {
-      message.reply('Rule #5: If It Twerks, It Works!');
-    }
+    var rulesArray = [	'Rule #1: Never Pull Out!',
+						'Rule #2: Spitters Are Quitters!',
+						'Rule #3: Safety First!',
+						'Rule #4: No Take-Backs!',
+						'Rule #5: If It Twerks, It Works!'];								
+	
+	message.channel.send(rulesArray[Math.floor(Math.random() * 5)]);
   }
   
   /*      Trigger: /ab rules all
         Response: Returns all rules   */
   if (msg === prefix + 'RULES' + ' ALL') {
 
-    console.log("\nUser ran \'Rules All\' trigger.");
+    console.log("\n" + sender + " ran \'Rules All\' trigger.");
 		
 	message.reply('Here are the Laws of the Lodge:' +
 	'\n```Rule #1: Never Pull Out!' +
@@ -109,16 +95,15 @@ botId = botId.toUpperCase();
   /*      Trigger: /ab coin
           Response: Flips a coin   */
    if (msg === prefix + 'COIN') {
-     var coinFlip = Math.floor(Math.random() * 2);
-     console.log("\nUser ran \'Coin\' trigger. Number generated:\t" + coinFlip);
-
-     if (coinFlip === 0) {
-       message.reply('You flipped a coin. You got heads!');
-     }
-     else {
-       message.reply('You flipped a coin. You got tails!');
-     }
-   }
+	   console.log("\n" + sender + " ran \'Coin\' trigger");
+		var coinFlip = 'heads';
+     
+		if (Math.floor(Math.random() * 2)) {
+			coinFlip = 'tails';
+		}
+		
+		message.channel.send( senderId + ' flipped a coin and it landed on ' + coinFlip + '!');
+	}
 
   /*      Trigger: -help, !help, /help
           Response: Redirects to Bot Help   */
@@ -148,10 +133,15 @@ botId = botId.toUpperCase();
 	  //}
     }
 
+
+    /*      Trigger: /ab mute
+            Response: In Development. Will allow players to vote on temp mutes   */
     if (msg.includes(prefix + "MUTE")) {
-      message.channel.send('I don\'t currently have this implemented yet! Try again later!');
-	  //message.channel.send(sender + ' has initiated a mute on ' + sender);
+      message.channel.send(DNE);
+	  //message.channel.send(senderId + ' has initiated a mute on ' + senderId);
 	}
+	
+	
     /*      Trigger: /ab status
             Response: Displays whether bot is online or not   */
     if (msg === prefix + "STATUS") {
@@ -159,28 +149,28 @@ botId = botId.toUpperCase();
     }
 
     if (msg === prefix + 'GOODNIGHT' || ( msg.includes('GOODNIGHT') && (msg.includes(botId) || msg.includes('ADRIBOT')))) {
-	  message.channel.send('Goodnight ' + sender + '. I\'ll see you tomorrow!');
+	  message.channel.send('Goodnight ' + senderId + '. I\'ll see you tomorrow!');
     }
 
     if (msg === prefix + 'WELCOME' || ( msg.includes('WELCOME') && (msg.includes(botId) || msg.includes('ADRIBOT')))) {
-      message.channel.send('Welcome back, ' + sender + '! Let me know if you need anything!');
+      message.channel.send('Welcome back, ' + senderId + '! Let me know if you need anything!');
     } 
 	
 	if (msg === prefix + 'DAB'){
 		var randDab = Math.floor(Math.random() * 11);
-		var fileName = './assets/GIF/dab_' + randDab + '.gif';
+		var fileName = '../assets/GIF/dab_' + randDab + '.gif';
 		message.channel.send(new Discord.Attachment(fileName));
 	}
 	
 	if ( ( /*msg.includes(prefix) || msg.includes('ADRIBOT') ) && */ msg.includes('PARTY'))) {
-		message.channel.send(new Discord.Attachment('./assets/GIF/frank_party.gif'));
+		message.channel.send(new Discord.Attachment('../assets/GIF/frank_party.gif'));
 	}
 	
-	if ( msg.includes('GOOD') && msg.includes('BOT') ) {
+	if ( msg.includes('GOOD ') && msg.includes('BOT') ) {
 		message.channel.send(':smile:');
 	}
 	
-	if ( msg.includes('BAD') && msg.includes('BOT') ) {
+	if ( msg.includes('BAD ') && msg.includes('BOT') ) {
 		message.channel.send(':cry:');
 	}
 	
