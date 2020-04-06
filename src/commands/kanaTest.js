@@ -16,7 +16,7 @@ exports.run = (message, args) => {
 	var senderId = message.member.toString();
 	var botId = message.client.user.id.toString();
 	
-	if (msg.includes("HI BOT") {
+	if (args.includes("HI BOT") {
         message.channel.send("Hey " + senderId);
     }
 }
