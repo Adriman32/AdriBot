@@ -5,12 +5,19 @@
 // Current Author: Adrian Ruvalcaba
 /*
     Used to kill the adribot application, then pull the newest version from repo
-    
+
 
 
 */
 
 exports.run = (message,args) => {
-	var senderId = message.member.toString();
-	message.channel.send('Welcome back, ' + senderId + '! Let me know if you need anything!');
+    message.channel.send('(Restarting) :Hunk:');
+    console.warn("Restarting");
+
+    const fs = require('fs');
+    fs.appendFile('C:\\Users\\jeffrey\\Documents\\GitHub\\AdriBot\\adricontroller.txt', 'from nodejs', function (err, file) {
+        if (err) throw err;
+        //console.log('updated!');
+        message.channel.send('Failed to pass data to AdriController');
+    });
 }
