@@ -13,3 +13,13 @@ A bot for Adrian’s Discord server. Created to simplify the life of members on 
 
 Build the nodejs package with
 >node
+#
+## TODO
+
+* Add function to listen to adricraft-chat for when someone changes the \ or / chain, also occasionally add a new \ or /, maybe on startup
+* Add chegg link functionality, rather than having users contribute to chegg account cost, we just leech someone's pre-existing chegg premium account, and just give them a shoutout each time the chegg bot replies
+* Add word filter that checks messege for profanity and bot in same msg. Adribot then replies more appropriatly
+* Add certain users can update adribot status
+## Sources
+
+* https://discordjs.guide/
