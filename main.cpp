@@ -14,7 +14,7 @@ Description: this is a child program designed to kill the parent process,
 #include <cstdlib> //needed for system calls
 
 
-#include <Windows.h>
+//#include <Windows.h>
 
 void start_File_Writer(const char** filename,  std::fstream * ofile){
 
@@ -37,10 +37,10 @@ void start_File_Writer(const char** filename,  std::fstream * ofile){
 void adribot_worker(){
     while(true){ //infinite loop the adribot worker
         system("node src/"); //run adribot till a /ab reboot
-        Sleep(1000);
+        //Sleep(1000);
         system("git pull");
         
-        Sleep(1000);
+        //Sleep(1000);
         
     }
 }
