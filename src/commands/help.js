@@ -16,4 +16,5 @@ exports.run = (message,args) => {
               '/ab mute <@person>\t\t Is someone annoying you? Vote to see if they should get a temp mute! It only\n\t\t\t\t\t\t   takes 3 votes!\n' +
 			  '/ab cc <#channel_name>\t Want to create your own temporary channel? Use this command and it will\n\t\t\t\t\t\t   do it for you!' +
 			  '```');
+
 }
