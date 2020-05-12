@@ -14,8 +14,7 @@ Description: this is a child program designed to kill the parent process,
 #include <cstdlib> //needed for system calls
 
 
-#include <thread> //needed for sleep fuctionality
-#include <chrono> //needed for sleep fuctionality
+#include <Windows.h>
 
 void start_File_Writer(const char** filename,  std::fstream * ofile){
 
@@ -35,30 +34,19 @@ void start_File_Writer(const char** filename,  std::fstream * ofile){
     (*ofile).close();
 }
 
-void adribot_worker(std::fstream * ofile){
-    int location = (*ofile).cur;
-    while(true){
-        std::cout << location << " " << (*ofile).eofbit << std::endl;
-        std::this_thread::sleep_for (std::chrono::seconds(1));
+void adribot_worker(){
+    while(true){ //infinite loop the adribot worker
+        system("node src/"); //run adribot till a /ab reboot
+        system("git pull");
+        
+        Sleep(1000);
+        
     }
 }
-int main(){
-//int main(int argc, char** argv){
-    using namespace std::chrono_literals;
-    std::cout << "Hello waiter\n" << std::flush;
-    auto start = std::chrono::high_resolution_clock::now();
-    std::this_thread::sleep_for(2s);
-    auto end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> elapsed = end-start;
-    std::cout << "Waited " << elapsed.count() << " ms\n";
-    
-    
-    
-    /*std::fstream * ofile = new std::fstream; // creates a new filestream and pointer to it
+int main(int argc, char** argv){
+    std::fstream * ofile = new std::fstream; // creates a new filestream and pointer to it
     char const * Filename = "adricontroller.txt"; //log file name
-    start_File_Writer(&Filename, ofile);//start file writer
-    //std::cout << std::endl << "FUCK" << std::endl;
-    system("node src/");
-    adribot_worker(ofile);
-    return 0;*/
+    //start_File_Writer(&Filename, ofile);//start file writer
+    adribot_worker();
+    return 0;
 }

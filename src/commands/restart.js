@@ -16,7 +16,7 @@ exports.run = (message,args) => {
                     "256291758013415425", 
                     "177584293269340162", 
                     "346818915294380032"]; //jeff, adrian, ribs, nicky
-    //console.log(message.author.id);
+    //console.log(message.author);
     for (i = 0; i < admins.length; i++) {
         if(message.author.id === admins[i]){
             validUser = true;
@@ -32,6 +32,7 @@ exports.run = (message,args) => {
                 console.log(err);
             //message.channel.send('Failed to pass data to AdriController');
         });
+        process.exit();//kill adribot
     }else{
         message.channel.send("You're not allowed to do that.");
         //perhaps also roast user
