@@ -9,10 +9,9 @@
 
 const Discord = require('discord.js');
 const config = require('./config.json');
-//const init = require('./utils/init.js');
 
 // Creates Bot
-const bot = new Discord.Client();
+const bot = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
 require('./utils/loadEvents.js')(bot);
 

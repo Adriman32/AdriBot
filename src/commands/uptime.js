@@ -7,8 +7,6 @@
 exports.run = (message,args) => {
 	var upVar = message.client.uptime;
 	var scale = " milliseconds";
-	console.log(upVar);
-
 	if(1000 <= upVar && upVar <= 59999) {
 		upVar = upVar/1000;
 		scale = " seconds";
