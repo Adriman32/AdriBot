@@ -3,7 +3,7 @@ exports.run = (message,args) => {
 	//the argument being passed of the name for who to roast.
 	var roasteeId = args;
 	var senderId = message.member.toString();
-	if (senderId == "<@177584293269340162>") {
+	if (senderId == "<@255908979761348608>") {
 			message.channel.send("Shutup forehead.")
 	} else {
 
