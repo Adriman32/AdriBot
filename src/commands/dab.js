@@ -8,6 +8,6 @@ const Discord = require ('discord.js');
 
 exports.run = (message,args) => {
 	var randDab = Math.floor(Math.random() * 11);
-	var fileName = '../assets/GIF/dab_' + randDab + '.gif';
+	var fileName = './assets/GIF/dab_' + randDab + '.gif';
 	message.channel.send(new Discord.Attachment(fileName));
 }

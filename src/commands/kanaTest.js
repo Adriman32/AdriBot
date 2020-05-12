@@ -11,12 +11,14 @@
 //	to create your command
 exports.run = (message, args) => {
 
-	var msg = message.content.toUpperCase();
-	var sender = message.member.user.tag;
+	//var msg = message.content.toUpperCase();
+	//var sender = message.member.user.tag;
 	var senderId = message.member.toString();
-	var botId = message.client.user.id.toString();
+	//var botId = message.client.user.id.toString();
 	
-	if (args.includes("HI BOT") {
+	if (args.includes("HI") & args.includes("BOT")){
         message.channel.send("Hey " + senderId);
     }
+	
+	console.log(args);
 }

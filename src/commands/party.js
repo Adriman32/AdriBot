@@ -7,5 +7,5 @@
 const Discord = require('discord.js');
 
 exports.run = (message,args) => {
-	message.channel.send(new Discord.Attachment('../assets/GIF/frank_party.gif'));
+	message.channel.send(new Discord.Attachment('./assets/GIF/frank_party.gif'));
 }
