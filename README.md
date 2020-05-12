@@ -9,7 +9,8 @@ A bot for Adrian’s Discord server. Created to simplify the life of members on 
 **(You will need)**
 
 * NodeJs
-* 
+* Raspberry Pi
+* GCC
 
 Build the nodejs package with
 >node
