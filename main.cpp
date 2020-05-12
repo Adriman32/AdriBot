@@ -37,6 +37,7 @@ void start_File_Writer(const char** filename,  std::fstream * ofile){
 void adribot_worker(){
     while(true){ //infinite loop the adribot worker
         system("node src/"); //run adribot till a /ab reboot
+        Sleep(1000);
         system("git pull");
         
         Sleep(1000);
@@ -45,7 +46,7 @@ void adribot_worker(){
 }
 int main(int argc, char** argv){
     std::fstream * ofile = new std::fstream; // creates a new filestream and pointer to it
-    char const * Filename = "adricontroller.txt"; //log file name
+    //char const * Filename = "adricontroller.txt"; //log file name
     //start_File_Writer(&Filename, ofile);//start file writer
     adribot_worker();
     return 0;
