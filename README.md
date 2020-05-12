@@ -4,6 +4,7 @@ A bot for Adrian’s Discord server. Created to simplify the life of members on 
 * **Adrian Ruvalcaba** - Github: [Adriman32](https://github.com/Adriman32)
 * **Jeffrey Smith** - Github: [jsmith1031](https://github.com/jsmith1031)
 * **Nicklas Pank** - Github: [NicklasPank](https://github.com/NicklasPank)
+* **River King** - Github: [Riverkw](https://github.com/Riverkw)
 #
 ## Getting Started
 **(You will need)**
