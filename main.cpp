@@ -9,14 +9,14 @@ Description: this is a child program designed to kill the parent process,
 
 */
 
-#include <iostream> //needed for io functionality
-#include <fstream> //needed for file streams
+//#include <iostream> //needed for io functionality
+//#include <fstream> //needed for file streams
 #include <cstdlib> //needed for system calls
 
 
 //#include <Windows.h>
 
-void start_File_Writer(const char** filename,  std::fstream * ofile){
+/*void start_File_Writer(const char** filename,  std::fstream * ofile){
 
     (*ofile).open(*filename, std::ios::in | std::ios::out | std::ios::binary);//open the argument file if it exists
 	
@@ -32,7 +32,7 @@ void start_File_Writer(const char** filename,  std::fstream * ofile){
     //char const * output = "fuck"; //debug code as a char*, this is can later be a log file, like date and time of restart
     //(*ofile).write((char*)output, sizeof(output)); //write the debug code to file
     (*ofile).close();
-}
+}*/
 
 void adribot_worker(){
     while(true){ //infinite loop the adribot worker
@@ -45,7 +45,7 @@ void adribot_worker(){
     }
 }
 int main(int argc, char** argv){
-    std::fstream * ofile = new std::fstream; // creates a new filestream and pointer to it
+    //std::fstream * ofile = new std::fstream; // creates a new filestream and pointer to it
     //char const * Filename = "adricontroller.txt"; //log file name
     //start_File_Writer(&Filename, ofile);//start file writer
     adribot_worker();
