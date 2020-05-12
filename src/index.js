@@ -18,4 +18,4 @@ const bot = new Discord.Client();
 require('./utils/loadEvents.js')(bot);
 
 bot.login(config.DISCORD_TOKEN);
-console.log(config.DISCORD_TOKEN); //debug code
+//console.log(config.DISCORD_TOKEN); //debug code
