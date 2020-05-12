@@ -27,8 +27,7 @@ exports.run = (message,args) => {
 			"grew out his hairline to coverup that fivehead."
 		];
 		var marshRoasts = [
-			
-			
+
 		]
 		/* randomizer to pull from roasts.
 		expected output: a number between 0 and 1 multiplied by the array length.
