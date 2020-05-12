@@ -30,7 +30,7 @@ exports.run = (message,args) => {
 	var joshRandRoast = Math.floor(Math.random() * joshRoasts.length);
 	
 	// return message including a random roast and the name passed to adriBot.
-	if (roasteeId == "josh" || roasteeId == "Josh" || roasteeId == "JOSH") {
+	if (roasteeId == "josh" || roasteeId == "Josh" || roasteeId == "JOSH" || roasteeId == "<@255908979761348608>") {
 	message.channel.send(roasteeId + " " + joshRoasts[joshRandRoast]);
 	} else {
 		message.channel.send(roasteeId + " " + roasts[randRoast]);
