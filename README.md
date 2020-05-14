@@ -22,6 +22,7 @@ Build the nodejs package with
 * Add chegg link functionality, rather than having users contribute to chegg account cost, we just leech someone's pre-existing chegg premium account, and just give them a shoutout each time the chegg bot replies
 * Add word filter that checks messege for profanity and bot in same msg. Adribot then replies more appropriatly
 * Add certain users can update adribot status
+* /ab tarkov or if word contains "tarkov" adribot (@user Get on tarkov)
 
 ## Compiling
 Compiling the adricontroller.exe
