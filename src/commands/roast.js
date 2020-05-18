@@ -8,7 +8,7 @@ exports.run = (message,args) => {
 	} else {
 
 		// array of random roasts.
-		var roasts = [  "smells like wet dog.", 
+		var roasts = [  		"smells like wet dog.", 
 						"built like bent iphone.", 
 						"uses his cats literbox for cereal.",
 						"looks like dead batteries.",
@@ -18,8 +18,9 @@ exports.run = (message,args) => {
 						"even helen keller think you ugly.",
 						"built like a public school basketball hoop.",
 						"look like they use sunblock as salad dressing",
-			      			"built like a bent iPhone"
-					 ];
+			      			"built like a bent iPhone",
+			      			"look like :Hunk:"
+			 ];
 		var joshRoasts = [
 			"forehead bigger than the washington monument.",
 			"born with a receding hairline.",
