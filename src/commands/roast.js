@@ -17,7 +17,8 @@ exports.run = (message,args) => {
 						"look like anne frank.",
 						"even helen keller think you ugly.",
 						"built like a public school basketball hoop.",
-						"look like they use sunblock as salad dressing"
+						"look like they use sunblock as salad dressing",
+			      			"built like a bent iPhone"
 					 ];
 		var joshRoasts = [
 			"forehead bigger than the washington monument.",
