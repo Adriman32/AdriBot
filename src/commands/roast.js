@@ -19,7 +19,10 @@ exports.run = (message,args) => {
 						"built like a public school basketball hoop.",
 						"look like they use sunblock as salad dressing",
 			      			"built like a bent iPhone",
-			      			"look like :Hunk:"
+			      			"look like a backwards road sign",
+			      			"look like bernie sanders",
+			      			"needs to wipe the bacon grease of his controller",
+			      			"look like the bottom of a mouse pad"
 			 ];
 		var joshRoasts = [
 			"forehead bigger than the washington monument.",
