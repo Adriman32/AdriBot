@@ -23,4 +23,6 @@ module.exports = (bot) => {
 			url: "https://www.twitch.tv/adriman32"
 		}
 	});
+	bot.channels.get('548328604258533377').send('Back online!');
+	//bot.channels.get('615292734483333123').send("\\");
 }
