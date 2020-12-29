@@ -6,6 +6,7 @@
 // Current Author: Adrian Ruvalcaba
 
 var badCount = 1;
+const Discord = require('discord.js');
 
 exports.run = (message,args) => {
 	var msg = message.content.toUpperCase();
@@ -51,14 +52,20 @@ exports.run = (message,args) => {
 	
 
 	if (msg.includes('BAD ') && msg.includes('BOT')) {
-			if(badCount){
-			message.channel.send(':cry:');
-			badCount = 0;
-			}
-			else
-			{
-				message.channel.send("Fuck off, " + senderId);
-			}
+
+		//if (senderId == "115329130697850883")
+		console.log(senderId);
+		if (senderId == "<@256291758013415425>")
+			message.channel.send(new Discord.Attachment('./assets/GIF/Ryan/Cartoon.gif'));
+
+		else if(badCount){
+		message.channel.send(':cry:');
+		badCount = 0;
+		}
+		else
+		{
+			message.channel.send("Fuck off, " + senderId);
+		}
 	}
 	
 	if (msg.includes('PARTY')) {
