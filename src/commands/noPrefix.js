@@ -53,9 +53,7 @@ exports.run = (message,args) => {
 
 	if (msg.includes('BAD ') && msg.includes('BOT')) {
 
-		//if (senderId == "115329130697850883")
-		console.log(senderId);
-		if (senderId == "<@256291758013415425>")
+		if (senderId == "<@115329130697850883>")
 			message.channel.send(new Discord.Attachment('./assets/GIF/Ryan/Cartoon.gif'));
 
 		else if(badCount){

@@ -8,7 +8,7 @@ exports.run = (message,args) => {
 	message.reply('Here is a list of things I can currently do:\n```\n\n'+
               '/ab coin\t\t\t\t   Flip a coin! Heads or Tails?\n'+
               '/ab rules\t\t\t\t  I read the Official Rules!\n' +
-              '\ \t\t\t\t\t\t  Press the icon under the escape key and I will delete it for you! Designed\n\t\t\t\t\t\t   for PokeCord.\n' +
+              '\`\t\t\t\t\t\t  Press the icon under the escape key and I will delete it for you! Designed\n\t\t\t\t\t\t   for PokeCord.\n' +
 			  '/ab dab\t\t\t\t    Dab!\n' +
 			  '/ab status\t\t\t\t Displays whether I am online or not.\n' +
 			  '/ab uptime\t\t\t\t Displays how long I have been online!\n' +
